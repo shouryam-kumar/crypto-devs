@@ -1,9 +1,9 @@
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.4;
+ // SPDX-License-Identifier: MIT
+  pragma solidity ^0.8.4;
 
-import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
-import "@openzeppelin/contracts/access/Ownable.sol";
-import "./IWhitelist.sol";
+  import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
+  import "@openzeppelin/contracts/access/Ownable.sol";
+  import "./IWhitelist.sol";
 
   contract CryptoDevs is ERC721Enumerable, Ownable {
       /**
@@ -27,7 +27,7 @@ import "./IWhitelist.sol";
       // Whitelist contract instance
       IWhitelist whitelist;
 
-      // boolean to keep track of when presale started
+      // boolean to keep track of whether presale started or not
       bool public presaleStarted;
 
       // timestamp for when presale would end
@@ -117,4 +117,3 @@ import "./IWhitelist.sol";
       // Fallback function is called when msg.data is not empty
       fallback() external payable {}
   }
-  
